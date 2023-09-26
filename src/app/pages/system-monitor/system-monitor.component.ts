@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./system-monitor.component.css'],
 })
 export class SystemMonitorComponent {
-  gpuSystemUsage!: number;
-  memSystemUsage!: number;
-  cpuSystemUsage!: number;
+  gpuSystemUsage: number = 50;
+  memSystemUsage: number = 100;
+  cpuSystemUsage: number = 86;
 
   constructor() {}
 
