@@ -7,7 +7,7 @@ import { Component, Input, OnChanges } from '@angular/core';
 })
 export class CardComponent {
   @Input() property: string = '';
-  @Input() propertyValue?: number;
+  @Input() propertyValue: number = 0;
 
   ngOnChanges(): void {}
 }

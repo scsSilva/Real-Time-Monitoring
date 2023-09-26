@@ -1,10 +1,10 @@
 <mat-card ngClass="container">
   <mat-card-content ngClass="content">
     <h2 ngClass="text">{{ property }}</h2>
-    <div>
-      <mat-progress-spinner color="primary" mode="determinate" [value]="propertyValue" ngClass="spinner" diameter="150">
-      </mat-progress-spinner>
-      <p ngClass="percent_value">{{propertyValue}}%</p>
+    <igx-circular-bar [value]="propertyValue" text="{{ propertyValue }}%" ngClass="spinner"></igx-circular-bar>
+    <div ngClass="icon">
+      <mat-icon color="warn" class="icon-material">memoryAlert</mat-icon>
     </div>
   </mat-card-content>
+
 </mat-card>
