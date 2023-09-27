@@ -1,8 +1,8 @@
-<mat-card ngClass="container">
-  <mat-card-content ngClass="content">
-    <h2 ngClass="text">{{ property }}</h2>
-    <igx-circular-bar [value]="propertyValue" text="{{ propertyValue }}%" ngClass="spinner"></igx-circular-bar>
-    <div ngClass="icon">
+<mat-card [style.background]="calcularCor()" class="container">
+  <mat-card-content class="content">
+    <h2 class="text">{{ property }}</h2>
+    <igx-circular-bar [value]="propertyValue" text="{{ propertyValue }}%" class="spinner"></igx-circular-bar>
+    <div class="icon">
       <mat-icon color="warn" class="icon-material">memoryAlert</mat-icon>
     </div>
   </mat-card-content>
