@@ -3,7 +3,7 @@
 ## Descrição
 <strong>Real Time Monitoring</strong> é um sistema que captura os dados de Memória, CPU e GPU do dispositivo em tempo real, utilizando SSE (Server-Sent Events).
 
-## Integrantes
+## Squad
 
 <table align="center">
   <tr>
