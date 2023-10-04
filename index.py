@@ -2,8 +2,11 @@ import psutil
 import GPUtil
 from flask import Flask, Response, json
 from flask_cors import CORS
+import socket
+import threading
 
-app = Flask(__name__)
+
+app = Flask(_name_)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
@@ -40,6 +43,16 @@ def usage_data():
     return Response(get_usage_data(), content_type='text/event-stream')
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     # Executar o aplicativo Flask
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.listen(5)
+
+    print("[INFO] Servidor de socket iniciado na porta 5000")
+
+    # Inicie a thread para atualizar os dados de uso
+    update_thread = threading.Thread(target=get_usage_data)
+    update_thread.daemon = True
+    update_thread.start()
     app.run(host='127.0.0.1', port=5000, threaded=True)
+    server.bind(('localhost', 5000))
